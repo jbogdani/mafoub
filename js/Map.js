@@ -144,7 +144,7 @@ const Map = {
       },
       onEachFeature: function (f, t) {
         t.bindPopup(`Site: <strong>${f.properties.siteid}</strong>${
-          site_galleries[f.properties.siteid] && `<p> ${site_galleries[f.properties.siteid].items.map( (e, i) => {
+          site_galleries[f.properties.siteid] ? `<p> ${site_galleries[f.properties.siteid].items.map( (e, i) => {
             return `<a 
                 href="./img/galleries/${site_galleries[f.properties.siteid].name}/${e}.jpg" 
                 class="fancybox" 
@@ -154,7 +154,7 @@ const Map = {
                 data-fancybox="${site_galleries[f.properties.siteid].name}">
                   Galerie de photos
                 </a>`
-          }).join('')}</p>`
+          }).join('')}</p>` : ``
         }`).bindLabel(f.properties.siteid);
       },
     });
