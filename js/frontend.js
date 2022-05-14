@@ -5,13 +5,4 @@ $(document).ready(function(){
 			window.location = $(this).data('path') + './search:' + $('#search').val();
 		}
 	});
-
-
-
-	$('a.fancybox').fancybox({
-		helpers : {
-			title : {type : 'inside'}
-		}
-	});
-
 });
