@@ -1,0 +1,166 @@
+.header {
+    background: url("../img/mafoub-header.jpg") no-repeat center top fixed;
+    height: 338px;
+}
+.footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.footer {
+    border-top: 1px solid #d5dada;
+}
+.body {
+    background-color: #fff;
+    padding: 20px 0 50px 0;
+    min-height: 300px;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.share {
+    float: right !important;
+    font-size: 5em;
+}
+ul.fouilles li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    width: 200px;
+    height: 190px;
+    text-align: center;
+    overflow: hidden;
+}
+ul.fouilles li img {
+    -webkit-box-shadow: 0 0 10px #999;
+    box-shadow: 0 0 10px #999;
+}
+ul.fouilles li .caption {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #999;
+    height: 40px;
+}
+.leaflet-label {
+    background: #ebebeb;
+    background: rgba(235, 235, 235, 0.8100000000000001);
+    background-clip: padding-box;
+    border-color: #777;
+    border-color: rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 4px;
+    color: #111;
+    display: block;
+    font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 1px 6px;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 6;
+}
+.leaflet-label.leaflet-clickable {
+    cursor: pointer;
+    pointer-events: auto;
+}
+.leaflet-label:before,
+.leaflet-label:after {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    content: none;
+    position: absolute;
+    top: 5px;
+}
+.leaflet-label:before {
+    border-right: 6px solid #000;
+    border-right-color: inherit;
+    left: -10px;
+}
+.leaflet-label:after {
+    border-left: 6px solid #000;
+    border-left-color: inherit;
+    right: -10px;
+}
+.leaflet-label-right:before,
+.leaflet-label-left:after {
+    content: "";
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#map {
+    width: 100%;
+    min-height: 500px;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+.info .legend {
+    text-align: left;
+    line-height: 18px;
+    color: #555;
+}
+.info .legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+.info .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+}
+.info .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+.info .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+}
+.info ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+}
+.info .legend-source {
+    font-size: 70%;
+    color: #999;
+    margin-bottom: 10px;
+    clear: both;
+}
+.info a {
+    color: #777;
+}

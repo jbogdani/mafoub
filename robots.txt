@@ -15,5 +15,5 @@ Disallow: /controller.php
 Disallow: /admin.php
 Disallow: /admin
 Disallow: /sites/default/cfg/
-Disallow: /sites/default/css/
+Disallow: /css/
 Sitemap: https://mafoub.com/sitemap.xml
