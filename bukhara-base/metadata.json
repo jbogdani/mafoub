@@ -1,0 +1,12 @@
+{
+    "bounds": "61.3806,37.5272,66.4233,41.5579",
+    "center": "64.281,39.9182,8",
+    "minzoom": "7",
+    "maxzoom": "14",
+    "name": "Bukhara",
+    "description": "Bukhara survey project",
+    "legend": "",
+    "attribution": "",
+    "template": "",
+    "version": "1.0.0"
+}

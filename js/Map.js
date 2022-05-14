@@ -26,7 +26,7 @@ const Map = {
         "Google Roadmap": new L.Google("ROADMAP") 
       },
       overlays: { 
-        "Carte régionale 1893": L.mapbox.tileLayer("sites/default/modules/mbtiles/bukhara-base.tilejson").addTo(this.map)
+        "Carte régionale 1893": L.tileLayer("./bukhara-base/{z}/{x}/{y}.png").addTo(this.map)
       },
     };
       
