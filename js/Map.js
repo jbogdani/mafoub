@@ -26,7 +26,7 @@ const Map = {
         "Google Roadmap": new L.Google("ROADMAP") 
       },
       overlays: { 
-        "Carte régionale 1893": L.tileLayer("./bukhara-base/{z}/{x}/{y}.png").addTo(this.map)
+        "Carte régionale 1893": L.tileLayer("../bukhara-base/{z}/{x}/{y}.png").addTo(this.map)
       },
     };
       
@@ -117,7 +117,7 @@ const Map = {
       pointToLayer: function (t, i) {
         if (!e.type) return new L.CircleMarker(i, {
           radius: 5, 
-          fillColor: "#e0930e", 
+          fillColor: site_galleries[t.properties.siteid] ? '#ff0000' : '#e0930e', 
           color: "#000", 
           weight: 1, 
           opacity: 1, 
