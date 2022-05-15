@@ -147,10 +147,8 @@ const Map = {
           site_galleries[f.properties.siteid] ? `<p> ${site_galleries[f.properties.siteid].items.map( (e, i) => {
             return `<a 
                 href="../img/galleries/${site_galleries[f.properties.siteid].name}/${e}.jpg" 
-                class="fancybox" 
                 ${i > 0 && `style="display:none" `}
                 data-caption="${site_galleries[f.properties.siteid].name} #${i+1}"
-                rel="${site_galleries[f.properties.siteid].name}" 
                 data-fancybox="${site_galleries[f.properties.siteid].name}">
                   Galerie de photos
                 </a>`

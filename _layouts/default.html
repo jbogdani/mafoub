@@ -1,0 +1,109 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <title>{% if page.data %} {{ page.data }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description | strip }}{% else %}{{ site.description | strip }}{% endif %}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta lang="fr" />
+	
+  <link rel="stylesheet" href="{{ 'css/styles.css' | relative_url }}" />
+	
+	<!-- Open Graph metadata -->
+	<meta property="og:title" content="{% if page.data %} {{ page.data }}{% else %}{{ site.title }}{% endif %}" />
+	<meta property="og:description" content="{% if page.description %}{{ page.description | strip }}{% else %}{{ site.description | strip }}{% endif %}" />
+	<meta property="og:url" content="https://mafoub.com/" />
+	
+	
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://cdn.usebootstrap.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	
+	
+	<link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+	
+	<link rel="stylesheet" href="{{ 'css/styles.css' |relative_url }}">
+
+</head>
+
+<body>
+	<!-- Site Header -->
+	<div class="header">
+		<div class="container">
+			<h1>Mission Archéologique Franco-Ouzbèke dans l'Oasis de Boukhara (Musée du Louvre)<br>
+				<small>dirigée par Dr. Rocco Rante</small>
+			</h1>
+		</div>
+		
+	</div> <!-- end of header-->
+	
+	<!-- Main Menu -->
+	<div class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>            
+			<div class="collapse navbar-collapse">
+
+        <ul class="menu nav navbar-nav main">
+  
+          {% for i in site.data.menu %}
+          {% assign full_url = i.url|append:'.html' %}
+          <li class="menu-item{% if page.url == full_url %} active{% endif %}">
+            <a href="{{ i.url | relative_url }}"  title="{{ i.title }}">
+              {{ i.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<!-- Main body -->
+	<div class="body">
+		<div class="container">
+      {{ content }}
+			
+			
+			
+			<!-- FOOTER -->
+			<div class="footer">
+				<div class="container">
+					<div class="pull-left">
+						<p class="lead">MAFOUB.com</p>
+						<h4>Mission Archéologique Franco-Ouzbèke dans l'Oasis de Boukhara (Musée du Louvre)</h4>
+						<p>&copy; All rights reserved</p>
+					</div>
+					<div class="share">
+						<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=ra-54500a7732121640">
+							<img src="{{ "img/share-button.svg" | relative_url }}" alt="Share" style="width:50px">
+						</a><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54500a7732121640" async="async"></script>
+					</div>
+				</div>
+				
+				
+			</div><!-- Footer end -->
+
+      {% include ga.html %}
+			{% if page.deps.js %}
+    {% for js in page.deps.js %}
+    <script src="{{ js }}"></script>
+    {% endfor %}
+  {% endif %}
+  {% if page.deps.css %}
+    {% for css in page.deps.css %}
+    <link rel="stylesheet" href="{{ css }}">
+    {% endfor %}
+  {% endif %}
+	
+		</body>
+		</html>
