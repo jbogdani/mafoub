@@ -1,0 +1,14 @@
+title: "MAFOUB: Mission Archéologique Franco-Ouzbèke dans l'Oasis de Boukhara (Musée du Louvre)"
+description: >- # this means to ignore newlines until "baseurl:"
+  Le département des Arts de l’Islam du musée du Louvre, en partenariat avec le Ministère des Affaires Etrangères et l’Institut d’Archéologie de Samarkand, a ouvert en 2009 une mission archéologique dans l’Oasis de Boukhara. L’objectif est d’étudier le phénomène d’occupation humaine de l’oasis et de reconsidérer le phénomène urbain et culturel dans cette région, en le comparant et en l’envisageant au travers du prisme de ses relations avec les villes khorassaniennes et iraniennes. Il s’agit également de procéder à une étude de la culture matérielle et de son évolution.
+
+exclude:
+  - site
+  - Gemfile
+  - Gemfile.lock
+
+google_analytics: UA-10461068-27
+
+defaults:
+  - values:
+      layout: default
